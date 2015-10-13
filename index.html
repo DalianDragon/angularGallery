@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Gallery</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-app="app" ng-controller="MainCtrl as vm" resize>
+
+<a href="#" class="galleryLink" ng-click="vm.getResource('gallery1.json')">Show Gallery 1</a>
+<a href="#" class="galleryLink" ng-click="vm.getResource('gallery2.json')">Show Gallery 2</a>
+<a href="#" class="galleryLink" ng-click="vm.getResource('gallery3.json')">Show Gallery 3</a>
+
+<div id="angularGallery" ng-show="vm.showGallery">
+	<div class="gallery">
+		<div class="close" ng-click="vm.toggleGallery()">
+			<img src="closeimage.png" class="close-img">
+		</div>
+		<div class="display">
+			<img ng-src="{{ vm.displayImage }}" class="currentItem">
+		</div>
+
+		<div class="carousel">
+			<div ng-click="vm.navigateLeft()"  ng-show="vm.navLeft" class="nav nav-left">
+				<img src="nav-left-arrow.png" class="nav-left-img nav-image">
+			</div>
+			<div ng-click="vm.navigateRight()" ng-show="vm.navRight" class="nav nav-right">
+				<img src="nav-right-arrow.png" class="nav-right-img nav-image">
+			</div>
+			<div id="slider" class="container" ng-style="vm.navPosStyle">
+				<img ng-repeat="item in vm.galleryItems.image" ng-src="{{ item.big }}" class="galleryItem" ng-click="vm.setImage( item.big )">
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

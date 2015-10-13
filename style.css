@@ -1,0 +1,218 @@
+#angularGallery {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #2D2D2D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#angularGallery .gallery{
+    width: 1060px;
+    height: 596px;
+    display: block;
+    margin: 0 auto;
+    height: 723px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 0px 13px #1B1B1B;
+    position: relative;
+}
+
+.galleryLink{
+   display :block;
+   text-decoration: none;
+   font-family: helvetica;
+   color: #939393;
+   cursor: pointer;
+   padding: 5px;
+}
+
+.galleryLink:hover{
+   display :block;
+   text-decoration: none;
+   font-family: helvetica;
+   color: #363636;
+   cursor: pointer;
+   padding: 5px;
+   transition: color 0.2s ease-in-out;
+}
+#angularGallery .display {
+    height: 596px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+}
+#angularGallery .currentItem {}
+#angularGallery	.carousel {
+    height: 127px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0px;
+}
+#angularGallery	.nav {
+    width: 38px;
+    height: 115px;
+    background-color: rgba(255, 255, 255, 0.44);
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10110000000000;
+    bottom: 4px;
+}
+
+#angularGallery .nav-image{
+    opacity: 0.6;
+    /* z-index: 0; */
+    /* display: block; */
+    height: 30%;
+    /* padding: 22px; */
+}
+
+img.nav-right-img.nav-image {}
+
+#angularGallery	.nav:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+}
+#angularGallery .nav-left {
+    left: 0px;
+    bottom: 6px;
+    border-left: 6px solid #4E4B4A;
+}
+#angularGallery .nav-right {
+    position: absolute;
+    right: 0px;
+    bottom: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 6px solid rgb(78, 75, 74);
+}
+#angularGallery .nav-left-img {
+    width: 20px;
+}
+
+#angularGallery .container {
+    height: 123px;
+    width: 5000px;
+    display: flex;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    background-color: #4E4B4A;
+    padding: 2px;
+    z-index: 10000000;
+}
+#angularGallery .galleryItem {
+    width: 203px;
+    cursor: pointer;
+    opacity: 0.9;
+    margin: 4px;
+    z-index: 0;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+}
+#angularGallery .galleryItem:hover {
+   opacity:1;
+}
+
+#angularGallery .close-img {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 20px;
+    padding: 15px;
+    opacity: 0.7;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+    @media only screen and (max-width : 1060px) {
+
+        #angularGallery .gallery{
+            width: 637px;
+            height: 485px;
+        }
+        #angularGallery .display {
+            /* height: 833px; */
+        }
+        #angularGallery .currentItem {
+            width: 100%;
+        }
+        #angularGallery .carousel {
+            height: 127px;
+        }
+        #angularGallery .nav {
+            width: 38px;
+            height: 115px;
+            bottom: 6px;
+        }
+
+        #angularGallery .display {
+            height: 358px;
+        }
+
+    }
+
+    @media only screen and (max-width : 637px) {
+
+        #angularGallery .gallery{
+            width: 100%;
+            height: auto;
+        }
+        #angularGallery .display {
+            /* height: 833px; */
+        }
+        #angularGallery .currentItem {
+            width: 100%;
+        }
+        #angularGallery .carousel {
+            /* display: none; */
+            bottom: -130px;
+        }
+        #angularGallery .nav {
+            width: 50px;
+            height: 50px;
+            bottom: 130px;
+            /* position: relative; */
+            border: 0px;
+        }
+
+        #angularGallery .display {
+            height: auto;
+            /* padding-top: 60px; */
+            /* padding-bottom: 60px; */
+            /* border-top: 50px solid rgba(0, 0, 0, 0.71); */
+            border-bottom: 50px solid rgba(0, 0, 0, 0.71);
+        }
+
+        #angularGallery .nav-left-img {
+            width: 15px;
+        }
+        #angularGallery .nav-right-img {
+            /* width: 15px; */
+        }
+        #angularGallery .nav-image{
+            opacity: 0.6;
+            /* z-index: 0; */
+            /* display: block; */
+            height: 50%;
+            /* padding: 22px; */
+        }
+
+    }
+
